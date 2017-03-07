@@ -1,1 +1,1 @@
-web: java -war ChronoMed-web/target/ChronoMed-web-1.0-SNAPSHOT.war
+web: java -jar ChronoMed-web/target/ChronoMed-web-1.0-SNAPSHOT.war
