@@ -49,7 +49,7 @@ public class FrontController extends HttpServlet {
 
     private Class getCommandClass(HttpServletRequest request) {
         try {
-            return Class.forName("es.chronomed.command." + (String) request.getParameter("command"));
+            return Class.forName("es.chronomed.chronomed.command." + (String) request.getParameter("command"));
         } catch (ClassNotFoundException e) {
             return UnknownCommand.class;
         }
