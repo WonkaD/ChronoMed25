@@ -1,1 +1,1 @@
-web:    war:deploy target/*.war
+web:    java $JAVA_OPTS -jar target\endorsed --port $PORT target/*.war
