@@ -41,6 +41,7 @@ public class FrontController extends HttpServlet {
 
     private FrontCommand getCommand(HttpServletRequest request) {
         try {
+            final FrontCommand caca = (FrontCommand) getCommandClass(request).newInstance();
             return (FrontCommand) getCommandClass(request).newInstance();
         } catch (IllegalAccessException | InstantiationException e) {
             return null;
@@ -49,7 +50,8 @@ public class FrontController extends HttpServlet {
 
     private Class getCommandClass(HttpServletRequest request) {
         try {
-            return Class.forName("es.chronomed.chronomed.command." + (String) request.getParameter("command"));
+            final String command = (String) request.getParameter("command");
+            return Class.forName("es.chronomed.chronomed.command." + command);
         } catch (ClassNotFoundException e) {
             return UnknownCommand.class;
         }

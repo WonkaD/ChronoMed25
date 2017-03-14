@@ -19,7 +19,7 @@
             Comando1 (TODO): <input type="submit">
         </form>
         <form action="FrontController">
-            <input type="hidden" name="command" value="Comando2">
+            <input type="hidden" name="command" value="TextCommand">
             Comando2 (TODO): <input type="submit">
         </form>
         <% if(request.getAttribute("mensaje")!= null){%>
