@@ -18,5 +18,14 @@
             <input type="hidden" name="command" value="Comando1">
             Comando1 (TODO): <input type="submit">
         </form>
+        <form action="FrontController">
+            <input type="hidden" name="command" value="Comando2">
+            Comando2 (TODO): <input type="submit">
+        </form>
+        <% if(request.getAttribute("mensaje")!= null){%>
+            <h3> Mensaje del Bean: </h3>
+            
+        <%  out.print(request.getAttribute("mensaje"));
+        } %>
     </body>
 </html>
