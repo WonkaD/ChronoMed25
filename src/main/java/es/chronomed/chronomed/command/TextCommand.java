@@ -3,7 +3,6 @@ package es.chronomed.chronomed.command;
 import es.chronomed.chronomed.beans.State1;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.EJB;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
